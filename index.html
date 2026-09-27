@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>YouTube - Página Inicial</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Material Symbols -->
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+>
+```
+
+</head>
+
+<body>
+
+```
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <button
+        class="menu-button"
+        onclick="toggleSidebar()"
+        aria-label="Abrir ou fechar menu"
+    >
+        <span class="material-symbols-outlined">menu</span>
+    </button>
+
+    <div class="youtube-logo">
+        <div class="youtube-icon">▶</div>
+        <span>YouTube</span>
+    </div>
+
+    <div class="search-area">
+
+        <input
+            class="search"
+            type="text"
+            placeholder="Pesquisar"
+            aria-label="Pesquisar"
+        >
+
+        <button class="search-button" aria-label="Pesquisar">
+            <span class="material-symbols-outlined">search</span>
+        </button>
+
+        <button class="mic" aria-label="Pesquisa por voz">
+            <span class="material-symbols-outlined">mic</span>
+        </button>
+
+    </div>
+
+    <div class="header-right">
+
+        <button class="header-button" aria-label="Criar">
+            <span class="material-symbols-outlined">add</span>
+        </button>
+
+        <button class="header-button" aria-label="Notificações">
+            <span class="material-symbols-outlined">notifications</span>
+        </button>
+
+        <img
+            class="avatar"
+            src="img/youtube.jpg"
+            alt="Foto do perfil"
+        >
+
+    </div>
+
+</header>
+
+
+<!-- ================= LAYOUT ================= -->
+
+<div class="layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside id="sidebar">
+
+        <div class="sidebar-item active">
+            <span class="material-symbols-outlined sidebar-icon">home</span>
+            <div>Início</div>
+        </div>
+
+        <div class="sidebar-item">
+            <span class="material-symbols-outlined sidebar-icon">smart_display</span>
+            <div>Shorts</div>
+        </div>
+
+        <div class="sidebar-item">
+            <span class="material-symbols-outlined sidebar-icon">subscriptions</span>
+            <div>Inscrições</div>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-item">
+            <span class="material-symbols-outlined sidebar-icon">history</span>
+            <div>Histórico</div>
+        </div>
+
+        <div class="sidebar-item">
+            <span class="material-symbols-outlined sidebar-icon">playlist_play</span>
+            <div>Playlists</div>
+        </div>
+
+        <div class="sidebar-item">
+            <span class="material-symbols-outlined sidebar-icon">smart_display</span>
+            <div>Seus vídeos</div>
+        </div>
+
+        <div class="sidebar-item">
+            <span class="material-symbols-outlined sidebar-icon">thumb_up</span>
+            <div>Vídeos com "Gostei"</div>
+        </div>
+
+        <hr>
+
+        <div class="sidebar-item">
+            <span class="material-symbols-outlined sidebar-icon">settings</span>
+            <div>Configurações</div>
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main id="main">
+
+        <!-- ================= CATEGORIAS ================= -->
+
+        <div class="categories">
+
+            <div class="category active">Tudo</div>
+            <div class="category">Música</div>
+            <div class="category">Jogos</div>
+            <div class="category">Programação</div>
+            <div class="category">Minecraft</div>
+            <div class="category">Tecnologia</div>
+            <div class="category">Notícias</div>
+            <div class="category">Filmes</div>
+
+        </div>
+
+
+        <!-- ================= VIDEOS ================= -->
+
+        <div class="videos">
+
+            <!-- VIDEO 1 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=1"
+                    alt="Thumbnail do vídeo sobre programação"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            Aprenda programação do zero em 2026
+                        </div>
+
+                        <div class="channel">
+                            Dev Academy
+                        </div>
+
+                        <div class="views">
+                            1,2 mi de visualizações • há 2 dias
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 2 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=2"
+                    alt="Thumbnail do vídeo sobre PC Gamer"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            Montei meu PC Gamer definitivo!
+                        </div>
+
+                        <div class="channel">
+                            Tech Brasil
+                        </div>
+
+                        <div class="views">
+                            845 mil visualizações • há 5 dias
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 3 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=3"
+                    alt="Thumbnail do vídeo sobre Minecraft"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            10 coisas que você precisa saber sobre Minecraft
+                        </div>
+
+                        <div class="channel">
+                            Mundo Gamer
+                        </div>
+
+                        <div class="views">
+                            2,4 mi de visualizações • há 1 semana
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 4 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=4"
+                    alt="Thumbnail do vídeo sobre HTML e CSS"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            Como criar seu primeiro site usando HTML e CSS
+                        </div>
+
+                        <div class="channel">
+                            Código Fácil
+                        </div>
+
+                        <div class="views">
+                            530 mil visualizações • há 3 dias
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 5 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=5"
+                    alt="Thumbnail sobre jogos"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            Os melhores jogos para jogar com seus amigos
+                        </div>
+
+                        <div class="channel">
+                            Play Zone
+                        </div>
+
+                        <div class="views">
+                            320 mil visualizações • há 1 dia
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 6 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=6"
+                    alt="Thumbnail sobre redes de computadores"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            Como funciona uma rede de computadores?
+                        </div>
+
+                        <div class="channel">
+                            Infra Tech
+                        </div>
+
+                        <div class="views">
+                            210 mil visualizações • há 4 dias
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 7 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=7"
+                    alt="Thumbnail sobre JavaScript"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            JavaScript explicado de forma simples
+                        </div>
+
+                        <div class="channel">
+                            Programador Iniciante
+                        </div>
+
+                        <div class="views">
+                            670 mil visualizações • há 6 dias
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- VIDEO 8 -->
+
+            <div class="video">
+
+                <img
+                    class="thumbnail"
+                    src="https://picsum.photos/800/450?random=8"
+                    alt="Thumbnail sobre Engenharia da Computação"
+                >
+
+                <div class="video-info">
+
+                    <div class="channel-avatar"></div>
+
+                    <div>
+                        <div class="video-title">
+                            Vale a pena estudar Engenharia da Computação?
+                        </div>
+
+                        <div class="channel">
+                            Vida Tech
+                        </div>
+
+                        <div class="views">
+                            185 mil visualizações • há 1 semana
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>

@@ -1,0 +1,599 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+body {
+background: #fff;
+color: #0f0f0f;
+overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+header {
+height: 64px;
+
+
+display: flex;
+align-items: center;
+
+padding: 0 24px;
+gap: 25px;
+
+border-bottom: 1px solid #eee;
+
+position: sticky;
+top: 0;
+
+background: #fff;
+
+z-index: 100;
+
+
+}
+
+/* ================= BUTTONS ================= */
+
+button {
+font-family: inherit;
+}
+
+.menu-button,
+.header-button {
+border: none;
+background: transparent;
+
+
+cursor: pointer;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+/* ================= MENU BUTTON ================= */
+
+.menu-button {
+width: 40px;
+height: 40px;
+
+
+border-radius: 50%;
+
+
+}
+
+.menu-button:hover,
+.header-button:hover {
+background: #f2f2f2;
+}
+
+/* ================= YOUTUBE LOGO ================= */
+
+.youtube-logo {
+display: flex;
+align-items: center;
+
+
+gap: 5px;
+
+font-size: 21px;
+font-weight: bold;
+
+
+}
+
+.youtube-icon {
+width: 34px;
+height: 24px;
+
+
+background: #ff0000;
+
+border-radius: 7px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+color: #fff;
+
+font-size: 13px;
+
+
+}
+
+/* ================= SEARCH ================= */
+
+.search-area {
+display: flex;
+align-items: center;
+
+
+flex: 1;
+
+max-width: 700px;
+
+margin: auto;
+
+
+}
+
+.search {
+height: 42px;
+
+
+flex: 1;
+
+border: 1px solid #ccc;
+
+border-radius: 22px 0 0 22px;
+
+padding: 0 18px;
+
+font-size: 16px;
+
+outline: none;
+
+
+}
+
+.search:focus {
+border-color: #1c62b9;
+}
+
+.search-button {
+width: 65px;
+height: 42px;
+
+
+border: 1px solid #ccc;
+
+border-left: none;
+
+border-radius: 0 22px 22px 0;
+
+background: #f8f8f8;
+
+cursor: pointer;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.search-button:hover {
+background: #f0f0f0;
+}
+
+.mic {
+margin-left: 12px;
+
+
+width: 42px;
+height: 42px;
+
+border: none;
+
+border-radius: 50%;
+
+background: #f2f2f2;
+
+cursor: pointer;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+
+}
+
+.mic:hover {
+background: #ddd;
+}
+
+/* ================= HEADER RIGHT ================= */
+
+.header-right {
+display: flex;
+align-items: center;
+
+
+gap: 10px;
+
+font-size: 20px;
+
+
+}
+
+.header-button {
+width: 40px;
+height: 40px;
+
+
+border-radius: 50%;
+
+
+}
+
+.avatar {
+width: 34px;
+height: 34px;
+
+
+border-radius: 50%;
+
+object-fit: cover;
+
+
+}
+
+/* ================= LAYOUT ================= */
+
+.layout {
+display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+
+aside {
+width: 220px;
+
+
+padding: 15px 12px;
+
+position: fixed;
+
+top: 64px;
+bottom: 0;
+
+background: #fff;
+
+overflow-y: auto;
+
+z-index: 90;
+
+transition: width 0.2s ease;
+
+
+}
+
+.sidebar-item {
+display: flex;
+align-items: center;
+
+
+gap: 22px;
+
+padding: 12px 15px;
+
+border-radius: 10px;
+
+cursor: pointer;
+
+font-size: 14px;
+
+
+}
+
+.sidebar-item:hover {
+background: #f2f2f2;
+}
+
+.sidebar-item.active {
+background: #f2f2f2;
+
+
+font-weight: bold;
+
+
+}
+
+.sidebar-icon {
+font-size: 21px;
+
+
+width: 25px;
+
+text-align: center;
+
+flex-shrink: 0;
+
+
+}
+
+aside hr {
+border: none;
+
+
+border-top: 1px solid #ddd;
+
+margin: 15px 0;
+
+
+}
+
+/* ================= SIDEBAR FECHADA ================= */
+
+aside.closed {
+width: 75px;
+}
+
+aside.closed .sidebar-item div {
+display: none;
+}
+
+aside.closed .sidebar-item {
+justify-content: center;
+
+
+padding: 15px 0;
+
+gap: 0;
+
+
+}
+
+aside.closed hr {
+margin: 10px 0;
+}
+
+/* ================= MAIN ================= */
+
+main {
+margin-left: 220px;
+
+
+padding: 20px 30px;
+
+width: calc(100% - 220px);
+
+transition: all 0.2s ease;
+
+
+}
+
+main.sidebar-closed {
+margin-left: 75px;
+
+
+width: calc(100% - 75px);
+
+
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories {
+display: flex;
+
+
+gap: 12px;
+
+overflow-x: auto;
+
+margin-bottom: 25px;
+
+scrollbar-width: none;
+
+
+}
+
+.categories::-webkit-scrollbar {
+display: none;
+}
+
+.category {
+background: #f2f2f2;
+
+
+padding: 9px 16px;
+
+border-radius: 8px;
+
+white-space: nowrap;
+
+font-size: 14px;
+
+cursor: pointer;
+
+
+}
+
+.category:hover {
+background: #ddd;
+}
+
+.category.active {
+background: #0f0f0f;
+
+
+color: #fff;
+
+
+}
+
+/* ================= VIDEOS ================= */
+
+.videos {
+display: grid;
+
+
+grid-template-columns: repeat(4, 1fr);
+
+gap: 35px 18px;
+
+
+}
+
+.video {
+cursor: pointer;
+}
+
+.thumbnail {
+width: 100%;
+
+
+aspect-ratio: 16 / 9;
+
+object-fit: cover;
+
+border-radius: 10px;
+
+background: #ddd;
+
+display: block;
+
+
+}
+
+.video-info {
+display: flex;
+
+
+gap: 12px;
+
+margin-top: 10px;
+
+
+}
+
+.channel-avatar {
+width: 36px;
+height: 36px;
+
+
+border-radius: 50%;
+
+background: #ddd;
+
+flex-shrink: 0;
+
+
+}
+
+.video-title {
+font-size: 15px;
+
+
+font-weight: 600;
+
+line-height: 1.35;
+
+margin-bottom: 6px;
+
+
+}
+
+.channel {
+color: #606060;
+
+
+font-size: 13px;
+
+margin-bottom: 3px;
+
+
+}
+
+.views {
+color: #606060;
+
+
+font-size: 13px;
+
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1200px) {
+
+
+.videos {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+}
+
+@media (max-width: 900px) {
+
+
+header {
+    gap: 15px;
+}
+
+aside {
+    width: 75px;
+}
+
+aside .sidebar-item div {
+    display: none;
+}
+
+aside .sidebar-item {
+    justify-content: center;
+}
+
+main {
+    margin-left: 75px;
+
+    width: calc(100% - 75px);
+}
+
+.videos {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.youtube-logo span {
+    display: none;
+}
+
+
+}
+
+@media (max-width: 600px) {
+
+
+header {
+    padding: 0 12px;
+
+    gap: 12px;
+}
+
+.search-area {
+    display: none;
+}
+
+aside {
+    display: none;
+}
+
+main {
+    margin-left: 0;
+
+    width: 100%;
+
+    padding: 15px;
+}
+
+.videos {
+    grid-template-columns: 1fr;
+}
+
+.header-right {
+    margin-left: auto;
+}
+
+
+}
